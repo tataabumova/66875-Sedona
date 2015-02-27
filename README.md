@@ -1,7 +1,7 @@
 # Проект «Sedona»
 
 * Студент: [Татьяна Абумова](https://htmlacademy.ru/profile/id66875).
-* Наставник: `Unknown`.
+* Наставник: [Сергей Попов](https://htmlacademy.ru/profile/id42761).
 
 --
 
