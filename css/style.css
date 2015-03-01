@@ -4,6 +4,7 @@
     width: 23px;
     height: 22px;
     background: #81b3d2;
+    border: none;
 }
 .open-menu:before {
     position: absolute;
