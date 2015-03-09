@@ -1,26 +1,96 @@
-.open-menu {
-    position: relative;
-    display: inline-block;
-    width: 23px;
-    height: 22px;
-    background: #81b3d2;
-    border: none;
+/***colors****/
+/********fonts*********/
+/*****************/
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 320px;
+  width: 100%;
 }
-.open-menu:before {
-    position: absolute;
-    content:'';
-    background: #fff;
-    height: 5px;
-    width: inherit;
-    top: 4px;
-    left: 0px;
+.wrapper {
+  background-color: #ffffff;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 21px;
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
-.open-menu:after {
-    position: absolute;
-    content:'';
-    background: #fff;
-    height: 5px;
-    width: inherit;
-    top: 13px;
-    left: 0px;
+.mobile-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 222px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #81b3d2;
+}
+.mobile-nav__list {
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav__item {
+  list-style: none;
+  text-align: center;
+  padding: 14px 0;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+}
+.mobile-nav__item:first-of-type {
+  border-top: none;
+}
+.mobile-nav__item:last-of-type {
+  border-bottom: none;
+  background-image: url("../img/shadow-ul.png");
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+.mobile-nav__item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+}
+.btn--open {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  width: 23px;
+  height: 22px;
+  background: #81b3d2;
+}
+.btn--open:before,
+.btn--open:after {
+  position: absolute;
+  content: "";
+  background: #ffffff;
+  height: 5px;
+  width: inherit;
+  left: 0;
+}
+.btn--open:before {
+  top: 4px;
+}
+.btn--open:after {
+  top: 13px;
+}
+.btn--close {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  right: 20px;
+  top: 16px;
+  background: #81b3d2;
+  background-image: url("../img/btn-close.png");
+}
+.logo {
+  position: relative;
+  max-height: 56px;
+  text-align: center;
+}
+.logo__link {
+  z-index: 10;
 }
