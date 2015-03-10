@@ -12,10 +12,15 @@ body {
 	font-size: @font-size;
 	font-weight: @font-weight;
 	text-transform: uppercase;
-	line-height: @line-height;            
+	line-height: @line-height;  
+	text-align: center;          
 	box-shadow: 0 5px 15px 0 rgba(0, 1, 1, .2);
 }
 
+.page-header {
+	position: relative;
+	height: 869px;
+}
 .mobile-nav {
 	position: relative;
 	margin: 0;
@@ -105,4 +110,110 @@ body {
 	&__link {
 		z-index: 10;
 		}
+}
+
+.promo-image {
+	width: 320px;
+	height: 512px;
+	background-color: @blue;
+	background: url("@{dir}promo-text.png") 50% 21%,
+							url("@{dir}mask-top.png") 50% 365px,
+							url("@{dir}main-bg.jpg");
+	background-repeat: no-repeat;
+}
+
+.promo-block {
+	position: absolute;
+	width: inherit;
+	height: 200px;
+	bottom: 0;
+	padding: 0 30px;
+	background: @white;
+	color: @black;
+
+	&__title {
+		margin-top:38px;
+		margin-bottom: 29px;
+	}
+}
+
+h1, h2 {
+	font-size: @font-size-h1;
+	line-height: @line-height-h1;
+}
+
+.cause-item {
+	position: relative;
+	width: 260px;
+	height: 140px;
+	padding: 0 30px;
+	padding-top: 22px;
+	padding-bottom: 28px;
+	
+
+	&--blue {
+		background-color: @blue;
+		color: @white;
+	
+		.cause--with-img:first-of-type>& {
+			background-image: url("@{dir}mask-bottom.png");
+			background-repeat: no-repeat;
+			padding-top: 62px;
+		}
+	}
+
+	&__text {
+		letter-spacing: -0.2px;
+		line-height: 21px;
+	}
+
+	&--image {
+		height: 256px;
+		padding: 0;
+	}
+
+
+	&--text-with-img {
+		width: 210px;
+		height: auto;
+		text-align: left;
+		padding-left: 70px;
+		padding-right: 40px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+
+		&:before {
+			content: " ";
+			position: absolute;
+			width: 40px;
+			height: 60px;
+			left: 20px;
+			background-image: url("@{dir}sprite_text-with-img.png");
+			background-repeat: no-repeat;
+		
+			.cause-item--home& {
+				background-position: 0 7px;
+			}
+
+			.cause-item--souvenirs& {
+				background-position: 0 -129px;
+			}
+
+			.cause-item--food& {
+				background-position: 0 -243px;
+			}
+		}
+
+		&:first-of-type {
+			padding-top: 24px;
+		}
+		&:last-of-type {
+			padding-bottom: 16px;
+		}
+	}
+
+
+	&--grey {
+		background-color: @grey;
+	}
 }

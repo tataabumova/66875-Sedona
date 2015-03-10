@@ -13,8 +13,13 @@ body {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  line-height: 21px;
+  line-height: 24px;
+  text-align: center;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+.page-header {
+  position: relative;
+  height: 869px;
 }
 .mobile-nav {
   position: relative;
@@ -93,4 +98,90 @@ body {
 }
 .logo__link {
   z-index: 10;
+}
+.promo-image {
+  width: 320px;
+  height: 512px;
+  background-color: #81b3d2;
+  background: url("../img/promo-text.png") 50% 21%, url("../img/mask-top.png") 50% 365px, url("../img/main-bg.jpg");
+  background-repeat: no-repeat;
+}
+.promo-block {
+  position: absolute;
+  width: inherit;
+  height: 200px;
+  bottom: 0;
+  padding: 0 30px;
+  background: #ffffff;
+  color: #000000;
+}
+.promo-block__title {
+  margin-top: 38px;
+  margin-bottom: 29px;
+}
+h1,
+h2 {
+  font-size: 18px;
+  line-height: 26px;
+}
+.cause-item {
+  position: relative;
+  width: 260px;
+  height: 140px;
+  padding: 0 30px;
+  padding-top: 22px;
+  padding-bottom: 28px;
+}
+.cause-item--blue {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+.cause--with-img:first-of-type > .cause-item--blue {
+  background-image: url("../img/mask-bottom.png");
+  background-repeat: no-repeat;
+  padding-top: 62px;
+}
+.cause-item__text {
+  letter-spacing: -0.2px;
+  line-height: 21px;
+}
+.cause-item--image {
+  height: 256px;
+  padding: 0;
+}
+.cause-item--text-with-img {
+  width: 210px;
+  height: auto;
+  text-align: left;
+  padding-left: 70px;
+  padding-right: 40px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.cause-item--text-with-img:before {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  left: 20px;
+  background-image: url("../img/sprite_text-with-img.png");
+  background-repeat: no-repeat;
+}
+.cause-item--home.cause-item--text-with-img:before {
+  background-position: 0 7px;
+}
+.cause-item--souvenirs.cause-item--text-with-img:before {
+  background-position: 0 -129px;
+}
+.cause-item--food.cause-item--text-with-img:before {
+  background-position: 0 -243px;
+}
+.cause-item--text-with-img:first-of-type {
+  padding-top: 24px;
+}
+.cause-item--text-with-img:last-of-type {
+  padding-bottom: 16px;
+}
+.cause-item--grey {
+  background-color: #eeeeee;
 }
