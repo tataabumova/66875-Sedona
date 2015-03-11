@@ -185,3 +185,12 @@ h2 {
 .cause-item--grey {
   background-color: #eeeeee;
 }
+.cause-item--grey:not(:last-of-type):after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
+  bottom: 0;
+  left: 6%;
+}
