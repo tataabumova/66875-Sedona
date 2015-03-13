@@ -1,0 +1,39 @@
+.mobile-nav {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-weight: @font-weight-bold;
+	font-size: @font-size-h1;
+	line-height: @line-height-h1;
+	background-color: @blue;
+
+	&__list {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		list-style:none;
+		text-align: center;
+		padding: 14px 0;
+		border-top: 1px solid @border-top;
+		border-bottom: 1px solid @border-bottom;
+
+		&:first-of-type {
+			border-top: none;
+		}
+
+		&:last-of-type {
+			border-bottom: none;
+			background-image: url("@{dir}shadow-ul.png");
+			background-position: 0 100%;
+			background-repeat: no-repeat;
+		}
+
+		a {
+			color: @white;
+			text-decoration: none;
+		}
+	}
+
+}

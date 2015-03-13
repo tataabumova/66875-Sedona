@@ -1,0 +1,79 @@
+.btn {
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	outline: none;
+
+	&--open {
+		position: absolute;
+		right: 20px;
+		top: 17px;
+		.size(23px, 22px);
+		background: @blue;
+
+		&:before, &:after {
+			.before-after;
+			background: @white;
+			.size(inherit, 5px);
+			left: 0;
+		}
+
+		&:before {
+			top: 4px;
+		}
+		&:after {
+			top: 13px;
+		}
+	}
+	&--close {
+		position: absolute;
+		.size(23px, 22px);
+		right: 20px;
+		top:16px;
+		background: @blue;
+		background-image: url("@{dir}btn-close.png");
+	}
+
+	&--search {
+		display: block;
+		padding: 30px 35px;
+		background-color: @brown;
+		color: @white;
+		.font;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: @font-size-h1;
+		line-height: @line-height-h1;
+	}
+
+	&--search-blue {
+		margin-top: 15px;
+		margin-bottom: 23px;
+		padding: 17px;
+		width: 100%;
+		background: @blue;
+		color: @white;
+		.font;
+		font-size: @font-size-h1;
+		text-transform: uppercase;
+	}
+
+	&--minus,
+	&--plus {
+	margin-bottom: 30px;
+	background-color: #f2f2f2;
+	border: solid 2px #f2f2f2;
+	outline: none;
+	.size(38px, 38px);
+	vertical-align: bottom;
+	background-image: url("@{dir}sprite_search.png");
+	background-repeat: no-repeat;
+	}
+
+	&--minus {
+		background-position: 98% 15px;
+	}
+	&--plus {
+		background-position: 98% -91px;
+	}
+}

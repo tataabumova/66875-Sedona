@@ -1,0 +1,69 @@
+.search {
+	padding-top: 7px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	&__header {
+		font-size: 21px;
+		line-height: @line-height-h1;
+		font-weight: 700;
+	}
+
+	&__text {
+		margin-bottom: 24px;
+	}
+}
+
+.search-form {
+	position: relative;
+	z-index: 1;
+	font-weight: 700;
+	box-shadow: 0 7px 15px -3px rgba(0, 1, 1, .15);
+	padding: 25px 20px;
+	text-align: left;
+
+	label {
+		display: inline-block;
+		width: 100%;
+		padding-left: 15px;
+		margin-bottom: 8px;
+	}
+
+	&__date {
+	position: relative;
+	padding-left: 15px;
+	padding-top: 3px;
+	padding-bottom: 6px;	
+	padding-right: 35px;
+	margin-bottom: 25px;
+	width: 80%;
+	background: #f2f2f2 url("@{dir}sprite_search.png") no-repeat 98% -200px;
+	line-height: 26px;
+	text-transform: uppercase;
+	border: solid 2px #f2f2f2;
+	outline: none;
+	}
+
+	&__left-column,
+	&__right-column {
+		width: 116px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__left-column {
+		margin-right: 43px;
+	}
+	
+	&__count {
+	position: relative;
+	margin-bottom: 30px;
+	.size(34px, 32px);
+	background-color: #f2f2f2;
+	line-height: 26px;
+	border: solid 2px #f2f2f2;
+	outline: none;
+	text-align: center;
+	}
+
+}

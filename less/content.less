@@ -1,0 +1,85 @@
+.cause-item {
+	position: relative;
+	padding: 0 30px;
+	padding-top: 22px;
+	padding-bottom: 25px;
+	
+
+	&--blue {
+		background-color: @blue;
+		color: @white;
+	
+		.cause--with-img:first-of-type>& {
+			padding-top: 57px;
+			background-image: url("@{dir}mask-bottom.png");
+			background-repeat: no-repeat;
+			background-position: 100% -4%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 7px;
+	}
+
+	&__text {
+		letter-spacing: -0.2px;
+		line-height: 21px;
+	}
+
+	&--image {
+		height: 256px;
+		padding: 0;
+	}
+
+
+	&--text-with-img {
+		text-align: left;
+		padding-left: 70px;
+		padding-right: 40px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+
+		&:before {
+			.before-after;
+			width: 40px;
+			height: 60px;
+			left: 20px;
+			background-image: url("@{dir}sprite_text-with-img.png");
+			background-repeat: no-repeat;
+		
+			.cause-item--home& {
+				background-position: 0 7px;
+			}
+
+			.cause-item--souvenirs& {
+				background-position: 0 -129px;
+			}
+
+			.cause-item--food& {
+				background-position: 0 -237px;
+			}
+		}
+
+		&:first-of-type {
+			padding-top: 24px;
+		}
+		&:last-of-type {
+			padding-bottom: 23px;
+		}
+	}
+
+
+	&--grey {
+		background-color: @grey;
+		padding-top: 13px;
+ 		padding-bottom: 13px;
+
+		&:not(:last-of-type):after {
+			.before-after;
+			.size(280px, 1px);
+			background-color: #d6d6d6;
+			bottom:0;
+			left: 6%;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.logo {
+	position: relative;
+	max-height: 56px;
+	text-align: center;
+
+	&__link {
+		z-index: 100;
+		}
+}
+
+.promo-image {
+	height: 391px;
+	background-color: @blue;
+	background: url("@{dir}mask-top.png") 50% 100%,
+							url("@{dir}main-bg.jpg");
+	background-repeat: no-repeat;
+
+	img {
+		margin-top: 47px;
+		background-repeat: no-repeat;
+	}
+}
+
+.promo-block {
+	padding: 0 30px;
+	background: @white;
+	color: @black;
+
+	&__title {
+		margin-top:38px;
+		margin-bottom: 29px;
+	}
+}
+
+h1, h2 {
+	font-size: @font-size-h1;
+	line-height: @line-height-h1;
+}
