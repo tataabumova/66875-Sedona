@@ -7,9 +7,15 @@
 	line-height: @line-height-h1;
 	background-color: @blue;
 
+	@media @tablet {
+		background-color: @white;
+
+	}
+
 	&__list {
 		margin: 0;
 		padding: 0;
+
 	}
 
 	&__item {
@@ -19,9 +25,29 @@
 		border-top: 1px solid @border-top;
 		border-bottom: 1px solid @border-bottom;
 
+		@media @tablet {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 15px 0;
+			width:20%;
+			height: 100%;
+			border: none;
+
+		}
+
+		&:nth-child(2) {
+			@media @tablet {
+				margin-right: 20%;
+			}
+		}
+
 		a {
 			color: @white;
 			text-decoration: none;
+
+			@media @tablet {
+				color: @black;
+			}
 		}
 
 		&:first-of-type {
@@ -33,6 +59,11 @@
 			background-image: url("@{dir}shadow-ul.png");
 			background-position: 0 100%;
 			background-repeat: no-repeat;
+			background-size: 100%;
+
+			@media @tablet {
+				background-image: none;
+			}
 		}
 
 	}

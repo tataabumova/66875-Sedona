@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Sedona</title>
   <link rel="stylesheet" href="css/style.css"> 
 </head>
@@ -12,17 +13,17 @@
 		<header class="page-header">
 			<nav class="mobile-nav">
 				<ul class="mobile-nav__list">
-					<li class="mobile-nav__item"><a href="#">Карта штата</a></li>
-					<li class="mobile-nav__item"><a href="#">Информация</a></li>
-					<li class="mobile-nav__item"><a href="#">Фото и видео</a></li>
-					<li class="mobile-nav__item"><a href="#">Гостиницы</a></li>
+					<li class="mobile-nav__item"><a href="#">Карта штата</a></li><!--
+					--><li class="mobile-nav__item"><a href="#">Информация</a></li><!--
+					--><li class="mobile-nav__item"><a href="#">Фото и видео</a></li><!--
+					--><li class="mobile-nav__item"><a href="#">Гостиницы</a></li>
 				</ul>
 				<button class="btn btn--close"></button>
 			</nav>
 
 
 			<div class="logo">
-				<a class="logo__link" href="./index.html"><img src="img/logo.png" alt="logo" width="138" height="70"></a>
+				<a class="logo__link" href="./index.html"><img src="img/logo-sedona@1x.png" alt="logo" width="67"></a>
 				<button class="btn btn--open"></button>
 			</div>
 
@@ -43,7 +44,7 @@
 				<span class="cause-item__number">— №1 —</span>
 				<p class="cause-item__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
 			</div>
-			<div class="cause-item cause-item--image"><img src="img/sedona-city.jpg" alt="Седона" width="320" height="256"></div>
+			<div class="cause-item cause-item--image"><img src="img/sedona-city_768.jpg" alt="Седона" width="512" height="256"></div>
 		</div>
 
 
@@ -71,7 +72,7 @@
 				<span class="cause-item__number">— №2 —</span>
 				<p class="cause-item__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 			</div>
-			<div class="cause-item cause-item--image"><img src="img/devil-bridge.jpg" alt="Мост дьявола" width="320" height="256"></div>
+			<div class="cause-item cause-item--image"><img src="img/devil-bridge_768.jpg" alt="Мост дьявола" width="512" height="256"></div>
 		</div>
 
 
@@ -99,14 +100,14 @@
 
 		<div class="search">
 			<p class="search__header">Заинтересовались?</p>
-      <p class="search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      		<p class="search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       
-    </div>
+    	</div>
 
 		<a class="btn btn--search" href="#">Поиск гостиницы в Седоне</a>
-
         
-    <div class="search-form">
+    <div class="search-block">
+    	<div class="search-form">
 			<form action="#" method="post">
 				<label for="in-date">Дата заезда:</label>
 				<input class="search-form__date" type="text" id="in-date" name="in-date" placeholder="24 апреля 2014">
@@ -122,15 +123,15 @@
 				</div>
 
 				<div class="search-form__right-column">
-          <label for="child">Дети:</label><br>
-          <button class="btn btn--minus"></button><!--
-          --><input class="search-form__count" type="text" name="child" id="child"  value="0" maxlength="1"><!--
-          --><button class="btn btn--plus"></button>
-	      </div>
+					<label for="child">Дети:</label>
+					<button class="btn btn--minus"></button><!--
+					--><input class="search-form__count" type="text" name="child" id="child"  value="0" maxlength="1"><!--
+					--><button class="btn btn--plus"></button>
+	    		</div>
 
-
-        <button class="btn btn--search-blue">Найти</button>
+        		<button class="btn btn--search-blue">Найти</button>
 			</form>
+		</div>	
     </div>
 		
 
@@ -164,9 +165,9 @@
 
 	</div>
 
-
-	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="js/script.js"></script>
+	<script src="js/search-block.js"></script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script src="js/map.js"></script>
 
 </body>
 </html>

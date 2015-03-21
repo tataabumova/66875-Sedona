@@ -7,6 +7,10 @@
 		bottom: 0;
 		background: rgba(255,255,255,.9);
 		
+		@media @tablet {
+			.clearfix;
+			padding: 35px 0;
+		}
 
 		ul, li {
 			list-style: none;
@@ -26,17 +30,35 @@
   		font-size: 21px;
   		font-weight: 700;
   		line-height: @line-height-h1;
+
+  		@media @tablet {
+  			padding: 0;
+  			float: left;
+  			width: 33.33333333333333%;
+  		}
 	}
 
 	&__copyright {
 		padding-bottom: 39px;
   		padding-top: 30px;
+
+  		@media @tablet {
+  			padding: 0;
+  			float: left;
+  			width: 33.33333333333333%;
+  		}
 	}
 }
 
 
 .social {
 	padding: 10px;
+
+	@media @tablet {
+  			padding: 0;
+  			float: left;
+  			width: 33.33333333333333%;
+  		}
 
 	&__btn {
 		display: inline-block;

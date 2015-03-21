@@ -11,6 +11,10 @@
 		.size(23px, 22px);
 		background: @blue;
 
+		@media @tablet {
+			display: none;
+		}
+
 		&:before, &:after {
 			.before-after;
 			background: @white;
@@ -32,11 +36,16 @@
 		top:16px;
 		background: @blue;
 		background-image: url("@{dir}btn-close.png");
+		background-repeat: no-repeat;
+
+		@media @tablet {
+			display: none;
+		}
 	}
 
 	&--search {
 		display: block;
-		padding: 30px 35px;
+		padding: 30px 55px;
 		background-color: @brown;
 		color: @white;
 		.font;
@@ -44,6 +53,12 @@
 		text-transform: uppercase;
 		font-size: @font-size-h1;
 		line-height: @line-height-h1;
+
+		@media @tablet {
+			width: 50%;
+			min-width: 459px;
+			margin: 0 auto;
+		}
 	}
 
 	&--search-blue {

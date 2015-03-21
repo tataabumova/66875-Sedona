@@ -1,5 +1,6 @@
 .wrapper {
-	max-width: 320px;
+	margin: 0 auto;
+	max-width: 480px;
   	width: 100%;
 	background-color: @white;
 	.font;
@@ -9,4 +10,9 @@
 	line-height: @line-height;  
 	text-align: center;          
 	box-shadow: 0 5px 15px 0 rgba(0, 1, 1, .2);
+
+	@media @tablet {
+		min-width: 480px;
+		max-width: 1200px;
+	}
 }
