@@ -11,10 +11,6 @@
 		.size(23px, 22px);
 		background: @blue;
 
-		@media @tablet {
-			display: none;
-		}
-
 		&:before, &:after {
 			.before-after;
 			background: @white;
@@ -27,6 +23,10 @@
 		}
 		&:after {
 			top: 13px;
+		}
+		
+		@media @tablet {
+			display: none;
 		}
 	}
 	&--close {

@@ -1,14 +1,20 @@
 @import 'normalize/normalize.less';
 
-@import 'media_queries/media_queries.less';
+@import '_variables.less';
+@import '_mixins.less';
+@import '_wrapper.less';
 
-@import 'components/variables.less';
-@import 'components/mixins.less';
 @import 'components/btn.less';
-@import 'components/wrapper.less';
 @import 'components/navigation.less';
+@import 'components/logo.less';
 @import 'components/promo.less';
-@import 'components/content.less';
+@import 'components/cause.less';
 @import 'components/search_form.less';
 @import 'components/page_footer.less';
 @import 'components/map.less';
+
+
+h1, h2 {
+	font-size: @font-size-h1;
+	line-height: @line-height-h1;
+}

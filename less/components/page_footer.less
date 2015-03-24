@@ -7,15 +7,15 @@
 		bottom: 0;
 		background: rgba(255,255,255,.9);
 		
-		@media @tablet {
-			.clearfix;
-			padding: 35px 0;
-		}
-
 		ul, li {
 			list-style: none;
 			margin: 0;
 			padding: 0;
+		}
+
+		@media @tablet {
+			.clearfix;
+			padding: 35px 0;
 		}
 	}
 
@@ -54,12 +54,6 @@
 .social {
 	padding: 10px;
 
-	@media @tablet {
-  			padding: 0;
-  			float: left;
-  			width: 33.33333333333333%;
-  		}
-
 	&__btn {
 		display: inline-block;
 		vertical-align: middle;
@@ -77,10 +71,15 @@
 	&--ytb {
 		background-position: -106px 0;
 	}
+
+	@media @tablet {
+		padding: 0;
+		float: left;
+		width: 33.33333333333333%;
+  	}
 }
 
 .copyright {
-
 
 	& li {
 		display: inline-block;

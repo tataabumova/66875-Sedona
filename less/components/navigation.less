@@ -8,12 +8,7 @@
 	background-color: @blue;
 	display: block;
 	top: -222px;
-	transition: .5s ease top;
-
-	@media @tablet {
-		background-color: @white;
-
-	}
+	transition:  top ease .5s;
 
 	&__list {
 		margin: 0;
@@ -28,17 +23,8 @@
 		border-top: 1px solid @border-top;
 		border-bottom: 1px solid @border-bottom;
 
-		@media @tablet {
-			display: inline-block;
-			vertical-align: middle;
-			padding: 15px 0;
-			width:20%;
-			height: 100%;
-			border: none;
-
-		}
-
 		&:nth-child(2) {
+
 			@media @tablet {
 				margin-right: 20%;
 			}
@@ -69,13 +55,26 @@
 			}
 		}
 
+		@media @tablet {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 15px 0;
+			width:20%;
+			height: 100%;
+			border: none;
+
+		}
 	}
 
 	&--visible {
 		top: 0;
 	}
-	&--visible+div {
+	&--visible+.logo {
 		margin-top: 0;
 	}
 
+	@media @tablet {
+		top: 0;
+		background-color: @white;
+	}
 }

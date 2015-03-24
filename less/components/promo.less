@@ -1,56 +1,22 @@
-.logo {
-	position: relative;
-	max-height: 56px;
-	text-align: center;
-	background-image: url("@{dir}form-logo-triangle.svg");
-	background-repeat: no-repeat;
-	background-position: 50%;
-	transition: .5s ease margin-top;
-	margin-top: -222px;
-
-	&__link {
-		z-index: 100;
-	}
-	
-	@media @tablet {
-		position: absolute;
-		margin: 0 auto;
-		top: 0; left: 0; bottom: 0; right: 0;
-		width: 20%;
-		top:0;
-		
-	}
-
-	img {
-		@media @tablet {
-			width: 100%;
-			height: auto;
-			max-width: 67px;
-		
-		}
-	}
-}
-
 .promo-image {
 	height: 391px;
 	background-color: @blue;
 	background: url("@{dir}mask-top.png") 50% 100%,
 				url("@{dir}main-bg.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
-
-	@media @tablet {
-		height: 432px;
-		background: url("@{dir}bg-mask.png") 50% 100%,
-				url("@{dir}photo-background@1x.jpg");
-		background-repeat: no-repeat;
-		background-size: 100%;
-	
-	}
+	background-size: 100%, cover;
 
 	img {
 		margin-top: 47px;
 		background-repeat: no-repeat;
+	}
+
+	@media @tablet {
+		height: 432px;
+		background: url("@{dir}bg-mask.png") 50% 100%,
+					url("@{dir}photo-background@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: 100%, cover;
 	}
 }
 
@@ -59,17 +25,12 @@
 	background: @white;
 	color: @black;
 
-	@media @tablet {
-		padding: 0 115px;
-	}
-
 	&__title {
 		margin-top:38px;
 		margin-bottom: 29px;
 	}
-}
 
-h1, h2 {
-	font-size: @font-size-h1;
-	line-height: @line-height-h1;
+	@media @tablet {
+		padding: 0 115px;
+	}
 }
