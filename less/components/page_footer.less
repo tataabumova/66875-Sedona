@@ -13,7 +13,7 @@
 			padding: 0;
 		}
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			.clearfix;
 			padding: 35px 0;
 		}
@@ -31,7 +31,7 @@
   		font-weight: 700;
   		line-height: @line-height-h1;
 
-  		@media @tablet {
+  		@media @tablet, @descktop {
   			padding: 0;
   			float: left;
   			width: 33.33333333333333%;
@@ -42,7 +42,7 @@
 		padding-bottom: 39px;
   		padding-top: 30px;
 
-  		@media @tablet {
+  		@media @tablet, @descktop {
   			padding: 0;
   			float: left;
   			width: 33.33333333333333%;
@@ -59,20 +59,42 @@
 		vertical-align: middle;
 		.size(46px, 48px);
 		margin-right: 3px;
+		vertical-align: middle;
+  		font-size: 0;
 		background: @blue url("@{dir}sprite_social.png") no-repeat;
+		cursor: pointer;
+
+		&:hover {
+			background-color: @blue_2;
+		}
+		&:active {
+			background-color: @blue_3;
+		}
 	}
 
 	&--tw {
-		background-position: 0 0;
+		background-position: 15px 13px;;
+
+		&:active {
+			background-position: 15px -43px;
+		}
 	}
 	&--fb {
-		background-position: -55px 0;
+		background-position: -38px 13px;
+
+		&:active {
+			background-position: -38px -43px;
+		}
 	}
 	&--ytb {
-		background-position: -106px 0;
+		background-position: -89px 13px;
+
+		&:active {
+			background-position: -89px -43px;
+		}
 	}
 
-	@media @tablet {
+	@media @tablet, @descktop {
 		padding: 0;
 		float: left;
 		width: 33.33333333333333%;
@@ -97,11 +119,29 @@
 
 	}
 
-	&--web:after {
+	&--web {
+		&:after {
 		background-position: 12px 0;
+		}
+
+		&:hover:after {
+			background-position: 12px -46px;
+		}
+		&:active:after {
+			background-position: 12px -94px;
+		}
 	}
 
-	&--for:after {
+	&--for {
+		&:after {
 		background-position: 100% 0;
+		}
+
+		&:hover:after {
+			background-position: 100% -46px;
+		}
+		&:active:after {
+			background-position: 100% -94px;
+		}
 	}
 }

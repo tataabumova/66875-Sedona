@@ -25,7 +25,7 @@
 			top: 13px;
 		}
 		
-		@media @tablet {
+		@media @tablet, @descktop {
 			display: none;
 		}
 	}
@@ -34,11 +34,11 @@
 		.size(23px, 22px);
 		right: 20px;
 		top:16px;
-		background: @blue;
+		background: none;
 		background-image: url("@{dir}btn-close.png");
 		background-repeat: no-repeat;
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			display: none;
 		}
 	}
@@ -54,7 +54,7 @@
 		font-size: @font-size-h1;
 		line-height: @line-height-h1;
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			width: 50%;
 			min-width: 459px;
 			margin: 0 auto;
@@ -66,29 +66,61 @@
 		margin-bottom: 23px;
 		padding: 17px;
 		width: 100%;
-		background: @blue;
+		background-color: @blue;
 		color: @white;
 		.font;
 		font-size: @font-size-h1;
 		text-transform: uppercase;
+
+		&:hover {
+			background-color: @blue_2;
+		}
+		&:active {
+			background-color: @blue_3;
+			color: @blue_text_hover;
+		}
 	}
 
 	&--minus,
 	&--plus {
-	margin-bottom: 30px;
-	background-color: #f2f2f2;
-	border: solid 2px #f2f2f2;
-	outline: none;
-	.size(38px, 38px);
-	vertical-align: bottom;
-	background-image: url("@{dir}sprite_search.png");
-	background-repeat: no-repeat;
+		margin-bottom: 30px;
+		background-color: @grey_form;
+		border: solid 2px @grey_form;
+		outline: none;
+		.size(38px, 38px);
+		vertical-align: bottom;
+		background-image: url("@{dir}sprite_search.png");
+		background-repeat: no-repeat;
+
+		&:hover {
+			background-color: @grey_form_hover;
+			border: solid 2px @grey_form_hover;
+		}
+
+		&:active {
+			background-color: @white;
+		}
 	}
 
 	&--minus {
 		background-position: 98% 15px;
+
+		&:hover {
+			background-position: 98% -24px;
+		}
+		&:active {
+			background-position: 98% -62px;
+		}
 	}
 	&--plus {
 		background-position: 98% -91px;
+
+		&:hover {
+			background-position: 98% -130px;
+		}
+
+		&:active {
+			background-position: 98% -168px;
+		}
 	}
 }

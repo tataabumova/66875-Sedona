@@ -12,7 +12,7 @@
 		margin-bottom: 24px;
 	}
 
-	@media @tablet {
+	@media @tablet, @descktop {
 		padding: 32px 130px;
 		padding-bottom: 0;
 	}
@@ -24,10 +24,11 @@
 		width: 100%;
 		box-shadow: 0 7px 15px -3px rgba(0, 1, 1, .15);
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			display: none;
 			width: 50%;
 			min-width: 459px;
+			max-width: 600px;
 			height: 295px;
 			position: absolute;
 			margin: 0 auto;
@@ -39,7 +40,7 @@
 	
 	&--visible {
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			display: block;
 		}
 	}
@@ -61,7 +62,7 @@
 		padding-left: 15px;
 		margin-bottom: 8px;
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			padding: 0;
 			width: 113px;
 		}
@@ -75,14 +76,25 @@
 		padding-right: 35px;
 		margin-bottom: 25px;
 		width: 81%;
-		background: #f2f2f2 url("@{dir}sprite_search.png") no-repeat 98% -200px;
+		background: @grey_form url("@{dir}sprite_search.png") no-repeat 98% -200px;
 		line-height: 26px;
 		text-transform: uppercase;
-		border: solid 2px #f2f2f2;
+		border: solid 2px @grey_form;
 		outline: none;
 		-webkit-appearance: none;
 
-		@media @tablet {
+		&:hover {
+			background-color: @grey_form_hover;
+			background-position: 98% -239px;
+			border: solid 2px @grey_form_hover;
+		}
+
+		&:focus {
+			background-color: @white;
+			background-position: 98% -277px;
+		}
+
+		@media @tablet, @descktop {
 			padding: 2px 35px 4px 15px;
 			margin-bottom: 30px;
 			height: 26px;
@@ -100,21 +112,21 @@
 	&__left-column {
 		float: left;
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			width: 245px;
 		}
 	}
 	&__right-column {
 		float: right;
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			width: 195px;
 			text-align: right;
 		}
 
 		& label {
 			
-			@media @tablet {
+			@media @tablet, @descktop {
 				width: 62px;
 				text-align: left;
 			}
@@ -132,9 +144,18 @@
 		outline: none;
 		-webkit-appearance: none;
 		text-align: center;
+
+		&:hover {
+			background-color: @grey_form_hover;
+			border: solid 2px @grey_form_hover;
+		}
+
+		&:focus {
+			background-color: @white;
+		}
 	}
 
-	@media @tablet {
+	@media @tablet, @descktop {
 		width: 459px;
 		padding: 0;
 	}

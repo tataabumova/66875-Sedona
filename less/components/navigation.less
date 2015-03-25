@@ -19,23 +19,36 @@
 	&__item {
 		list-style:none;
 		text-align: center;
-		padding: 14px 0;
 		border-top: 1px solid @border-top;
 		border-bottom: 1px solid @border-bottom;
 
 		&:nth-child(2) {
 
-			@media @tablet {
+			@media @tablet, @descktop {
 				margin-right: 20%;
 			}
 		}
 
 		a {
+			cursor: pointer;
 			color: @white;
+			width: 100%;
 			text-decoration: none;
+			padding: 14px 0;
+			box-sizing: border-box;
+			display: inline-block;
 
-			@media @tablet {
+			@media @mobile {
+					&:hover {
+						background-color: @blue_2;
+					}
+					&:active {
+						background-color: @blue_3;
+					}
+			}
+			@media @tablet, @descktop {
 				color: @black;
+				line-height: @line-height-h1;
 			}
 		}
 
@@ -50,15 +63,14 @@
 			background-repeat: no-repeat;
 			background-size: 100%;
 
-			@media @tablet {
+			@media @tablet, @descktop {
 				background-image: none;
 			}
 		}
 
-		@media @tablet {
+		@media @tablet, @descktop {
 			display: inline-block;
 			vertical-align: middle;
-			padding: 15px 0;
 			width:20%;
 			height: 100%;
 			border: none;
@@ -73,8 +85,22 @@
 		margin-top: 0;
 	}
 
-	@media @tablet {
+	@media @tablet, @descktop {
 		top: 0;
 		background-color: @white;
+	}
+}
+
+
+@media @tablet, @descktop {
+	.mobile-nav {
+		a {
+			&:hover {
+				color: @blue;
+			}
+			&:active {
+				color: @light-grey;
+			}
+		}
 	}
 }
