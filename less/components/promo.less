@@ -6,15 +6,55 @@
 	background-repeat: no-repeat;
 	background-size: 100%, cover;
 
-	img {
+	&__welcome {
+		width: 140px;
 		margin-top: 47px;
-		background-repeat: no-repeat;
+		margin-bottom: 10px;
+		
+		@media @tablet, @descktop {
+			width: 185px;
+		}
+	}
+
+	&__tothegorgeous {
+		width: 195px;
+		margin-bottom: 58px;
+		
+		@media @tablet, @descktop {
+			width: 295px;
+			margin-bottom: 48px;
+		}
+	}
+
+	&__sedona {
+		width: 280px;
+		margin-bottom: 65px;
+		
+		@media @tablet, @descktop {
+			width: 455px;
+			margin-bottom: 55px;
+		}
+	}
+
+	&__becausecanyon {
+		width: 195px;
+				
+		@media @tablet, @descktop {
+			width: 295px;
+		}
 	}
 
 	@media @tablet, @descktop {
-		height: 432px;
+		height: 500px;
 		background: url("@{dir}bg-mask.png") 50% 100%,
 					url("@{dir}photo-background@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: 100%, cover;
+	}
+
+	@media (min-resolution: 1.5dppx) {
+		background: url("@{dir}bg-mask.png") 50% 100%,
+					url("@{dir}photo-background@2x.jpg");
 		background-repeat: no-repeat;
 		background-size: 100%, cover;
 	}

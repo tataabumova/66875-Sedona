@@ -1,6 +1,11 @@
 .map {
 	width: 100%;
 	height: 590px;
-	background: url("@{dir}map.jpg") no-repeat;
-	background-size: 100%;
+	background: url("@{dir}map_320.jpg") no-repeat;
+	background-size: cover;
+
+	@media @tablet, @descktop {
+		background: url("@{dir}map_768.jpg") no-repeat;
+		background-size: cover;
+	}
 }

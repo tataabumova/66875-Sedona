@@ -33,6 +33,7 @@
 
   		@media @tablet, @descktop {
   			padding: 0;
+  			margin-top: 10px;
   			float: left;
   			width: 33.33333333333333%;
   		}
@@ -44,6 +45,7 @@
 
   		@media @tablet, @descktop {
   			padding: 0;
+  			margin-top: 10px;
   			float: left;
   			width: 33.33333333333333%;
   		}
@@ -61,7 +63,7 @@
 		margin-right: 3px;
 		vertical-align: middle;
   		font-size: 0;
-		background: @blue url("@{dir}sprite_social.png") no-repeat;
+		background: @blue url("@{dir}icon_social.svg") no-repeat;
 		cursor: pointer;
 
 		&:hover {
@@ -73,24 +75,24 @@
 	}
 
 	&--tw {
-		background-position: 15px 13px;;
+		background-position: -5px -42px;
 
 		&:active {
-			background-position: 15px -43px;
+			background-position: -5px -170px;
 		}
 	}
 	&--fb {
-		background-position: -38px 13px;
+		background-position: -2px -6px;
 
 		&:active {
-			background-position: -38px -43px;
+			background-position: -2px -134px;
 		}
 	}
 	&--ytb {
-		background-position: -89px 13px;
+		background-position: -6px -77px;
 
 		&:active {
-			background-position: -89px -43px;
+			background-position: -6px -205px;
 		}
 	}
 
@@ -113,35 +115,27 @@
 
 		&:after {
 			.before-after;
-			.size(39px, 33px);
-			background: url("@{dir}sprite_copyright.png") no-repeat;
+			.size(39px, 39px);
+			background: url("@{dir}sprite_copyright.svg") no-repeat;
+		}
+		&:hover:after {
+			background: url("@{dir}sprite_copyright_hover.svg") no-repeat;
+		}
+		&:active:after {
+			background: url("@{dir}sprite_copyright_active.svg") no-repeat;
 		}
 
 	}
 
 	&--web {
-		&:after {
-		background-position: 12px 0;
-		}
-
-		&:hover:after {
-			background-position: 12px -46px;
-		}
-		&:active:after {
-			background-position: 12px -94px;
+		&:after, &:hover:after, &:active:after {
+		background-position: 3px -10px;
 		}
 	}
 
 	&--for {
-		&:after {
-		background-position: 100% 0;
-		}
-
-		&:hover:after {
-			background-position: 100% -46px;
-		}
-		&:active:after {
-			background-position: 100% -94px;
+		&:after, &:hover:after, &:active:after {
+		background-position: 1px -60px;
 		}
 	}
 }
